@@ -1,4 +1,4 @@
-package com.autobots.automanager.entidades;
+package com.autobots.automanager.cliente.entities;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,6 +12,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+
+import com.autobots.automanager.documento.entities.Documento;
+import com.autobots.automanager.endereco.entities.Endereco;
+import com.autobots.automanager.telefone.entities.Telefone;
 
 import lombok.Data;
 

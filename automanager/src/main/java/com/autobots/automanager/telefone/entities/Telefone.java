@@ -1,4 +1,4 @@
-package com.autobots.automanager.entidades;
+package com.autobots.automanager.telefone.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.autobots.automanager.entidades;
+package com.autobots.automanager.endereco.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

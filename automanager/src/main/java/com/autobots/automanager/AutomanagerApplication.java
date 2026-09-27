@@ -2,18 +2,17 @@ package com.autobots.automanager;
 
 import java.util.Calendar;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
 
-import com.autobots.automanager.entidades.Cliente;
-import com.autobots.automanager.entidades.Documento;
-import com.autobots.automanager.entidades.Endereco;
-import com.autobots.automanager.entidades.Telefone;
-import com.autobots.automanager.repositorios.ClienteRepositorio;
+import com.autobots.automanager.cliente.entities.Cliente;
+import com.autobots.automanager.cliente.repositories.ClienteRepositorio;
+import com.autobots.automanager.documento.entities.Documento;
+import com.autobots.automanager.endereco.entities.Endereco;
+import com.autobots.automanager.telefone.entities.Telefone;
 
 @SpringBootApplication
 public class AutomanagerApplication {
@@ -24,8 +23,11 @@ public class AutomanagerApplication {
 
 	@Component
 	public static class Runner implements ApplicationRunner {
-		@Autowired
-		public ClienteRepositorio repositorio;
+		private final ClienteRepositorio repositorio;
+
+		public Runner(ClienteRepositorio repositorio) {
+			this.repositorio = repositorio;
+		}
 
 		@Override
 		public void run(ApplicationArguments args) throws Exception {
